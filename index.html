@@ -15,9 +15,11 @@
     <div class="container">
       <h1 class="main-title">マイ書籍管理</h1>
       <div class="tablist">
-        <button class="tab-button active">本を検索</button>
-        <button class="tab-button">読みたい本</button>
-        <button class="tab-button">読んだ本</button>
+        <button id="js-search-tab" class="tab-button active">本を検索</button>
+        <button id="js-wishlist-tab" class="tab-button">
+          読みたい本
+        </button>
+        <button id="js-done-tab" class="tab-button">読んだ本</button>
       </div>
       <div class="search-section">
         <div class="search-bar">
@@ -127,5 +129,6 @@
         </div>
       </div>
     </div>
+    <script src="./index.js"></script>
   </body>
 </html>
