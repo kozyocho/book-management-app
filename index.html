@@ -16,12 +16,10 @@
       <h1 class="main-title">マイ書籍管理</h1>
       <div class="tablist">
         <button id="js-search-tab" class="tab-button active">本を検索</button>
-        <button id="js-wishlist-tab" class="tab-button">
-          読みたい本
-        </button>
+        <button id="js-wishlist-tab" class="tab-button">読みたい本</button>
         <button id="js-done-tab" class="tab-button">読んだ本</button>
       </div>
-      <div class="search-section">
+      <div id="js-search-section" class="search-section active">
         <div class="search-bar">
           <input
             type="text"
@@ -106,8 +104,129 @@
           </div>
         </div>
       </div>
-      <div class="bookshelf">
-        <!-- 本棚の内容がここに表示 -->
+      <div id="js-wishlist-section" class="wishlist-section">
+        <div class="wishlist__box">
+          <!-- 検索結果の本がここに表示 -->
+          <div class="wishlist__grid">
+            <div class="book-item">
+              <div class="book-cover">
+                <img
+                  src="http://books.google.com/books/content?id=HwZ9DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_ap"
+                  alt=""
+                />
+              </div>
+              <h3 class="book-title">吾輩は猫である</h3>
+              <p class="book-author">夏目漱石</p>
+            </div>
+            <div class="book-item">
+              <div class="book-cover">
+                <img
+                  src="http://books.google.com/books/content?id=HwZ9DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_ap"
+                  alt=""
+                />
+              </div>
+              <h3 class="book-title">吾輩は猫である</h3>
+              <p class="book-author">夏目漱石</p>
+            </div>
+            <div class="book-item">
+              <div class="book-cover">
+                <img
+                  src="http://books.google.com/books/content?id=HwZ9DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_ap"
+                  alt=""
+                />
+              </div>
+              <h3 class="book-title">吾輩は猫である</h3>
+              <p class="book-author">夏目漱石</p>
+            </div>
+            <div class="book-item">
+              <div class="book-cover">
+                <img
+                  src="http://books.google.com/books/content?id=HwZ9DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_ap"
+                  alt=""
+                />
+              </div>
+              <h3 class="book-title">吾輩は猫である</h3>
+              <p class="book-author">夏目漱石</p>
+            </div>
+            <div class="book-item">
+              <div class="book-cover">
+                <img
+                  src="http://books.google.com/books/content?id=HwZ9DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_ap"
+                  alt=""
+                />
+              </div>
+              <h3 class="book-title">吾輩は猫である</h3>
+              <p class="book-author">夏目漱石</p>
+            </div>
+            <div class="book-item">
+              <div class="book-cover">
+                <img
+                  src="http://books.google.com/books/content?id=HwZ9DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_ap"
+                  alt=""
+                />
+              </div>
+              <h3 class="book-title">吾輩は猫である</h3>
+              <p class="book-author">夏目漱石</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="js-done-section" class="done-section">
+        <div class="done__box">
+          <!-- 検索結果の本がここに表示 -->
+          <div class="done__grid">
+            <div class="book-item">
+              <div class="book-cover">
+                <img
+                  src="http://books.google.com/books/content?id=HwZ9DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_ap"
+                  alt=""
+                />
+              </div>
+              <h3 class="book-title">吾輩は猫である</h3>
+              <p class="book-author">夏目漱石</p>
+            </div>
+            <div class="book-item">
+              <div class="book-cover">
+                <img
+                  src="http://books.google.com/books/content?id=HwZ9DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_ap"
+                  alt=""
+                />
+              </div>
+              <h3 class="book-title">吾輩は猫である</h3>
+              <p class="book-author">夏目漱石</p>
+            </div>
+            <div class="book-item">
+              <div class="book-cover">
+                <img
+                  src="http://books.google.com/books/content?id=HwZ9DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_ap"
+                  alt=""
+                />
+              </div>
+              <h3 class="book-title">吾輩は猫である</h3>
+              <p class="book-author">夏目漱石</p>
+            </div>
+            <div class="book-item">
+              <div class="book-cover">
+                <img
+                  src="http://books.google.com/books/content?id=HwZ9DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_ap"
+                  alt=""
+                />
+              </div>
+              <h3 class="book-title">吾輩は猫である</h3>
+              <p class="book-author">夏目漱石</p>
+            </div>
+            <div class="book-item">
+              <div class="book-cover">
+                <img
+                  src="http://books.google.com/books/content?id=HwZ9DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_ap"
+                  alt=""
+                />
+              </div>
+              <h3 class="book-title">吾輩は猫である</h3>
+              <p class="book-author">夏目漱石</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- 本の詳細モーダル -->
