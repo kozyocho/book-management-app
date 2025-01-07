@@ -26,3 +26,21 @@ tabs.forEach((tab) => {
     console.log(sectionElement);
   });
 });
+
+const searchButton = document.getElementById("js-searchButton");
+
+searchButton.addEventListener("click", async function () {
+  try {
+    const url =
+      "https://www.googleapis.com/books/v1/volumes?q=夏目漱石&maxResults=30";
+
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error("Failed to fetch weather");
+    }
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+});

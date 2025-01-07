@@ -10,6 +10,12 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
+//google books apiを叩いてレスポンスを受け取る
+app.get("/serach", (req, res) => {
+  const url = "https://www.googleapis.com/books/v1/volumes?q=検索語句";
+  //reqにスペースがあれば+で繋げる
+});
+
 //サーバー起動
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
