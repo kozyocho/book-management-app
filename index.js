@@ -27,19 +27,28 @@ tabs.forEach((tab) => {
   });
 });
 
+const inputField = document.getElementById("js-input");
 const searchButton = document.getElementById("js-searchButton");
 
+//検索ボタンが押されたら入力された内容を取得
 searchButton.addEventListener("click", async function () {
   try {
-    const url =
-      "https://www.googleapis.com/books/v1/volumes?q=夏目漱石&maxResults=30";
+    const searchText = inputField.value.replace(/[\s　]+/g, "+");
+
+    // const url = `https://www.googleapis.com/books/v1/volumes?q=${searchText}&maxResults=30`;
+    const url = `https://www.googleapis.com/books/v1/volumes?q=${searchText}&maxResults=1`;
+    console.log(url);
 
     const response = await fetch(url);
     if (!response.ok) {
-      throw new Error("Failed to fetch weather");
+      throw new Error("Failed to fetch books");
     }
     const data = await response.json();
     console.log(data);
+    const title = data.items.volumeInfo.title;
+    const author = data.items.volumeInfo.authors;
+    const description = data.items.volumeInfo.description;
+    const thumbnail = data.items.volumeInfo.imageLinks.thumbnail;
   } catch (error) {
     console.error(error);
   }
